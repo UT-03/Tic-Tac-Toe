@@ -1,0 +1,23 @@
+.SideDrawer {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 150px;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.Show{
+    height: 150px;
+}
+
+@media (min-width:750px) {
+    .SideDrawer {
+        display: none;
+    }
+}

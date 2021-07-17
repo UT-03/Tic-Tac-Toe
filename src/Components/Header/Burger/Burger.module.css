@@ -1,0 +1,26 @@
+.Burger{
+    cursor: pointer;
+}
+
+.Burger .Bar{
+    width: 20px;
+    height: 5px;
+    margin: 3px;
+    transition: all 0.3s;
+}
+
+.Toggle .Bar1{
+    transform: translateY(8px) rotate(45deg);
+}
+.Toggle .Bar2{
+    opacity: 0;
+}
+.Toggle .Bar3{
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width:750px){
+    .Burger{
+        display: none;
+    }
+}
