@@ -1,0 +1,26 @@
+.Logo{
+    height: 100%;
+    width: 10%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Image{
+    height: 100%;
+}
+.Text{
+    display: none;
+}
+
+@media (min-width:750px){
+    .Logo{
+        width: 195px;
+    }
+    .Text{
+        display: block;
+        font-size: 1.5rem;
+    }
+
+}

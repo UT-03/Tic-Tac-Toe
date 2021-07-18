@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import styles from './Header.module.css';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
+import Logo from './Logo/Logo';
 import ControlButtons from '../ControlButtons/ControlButtons';
 import Burger from './Burger/Burger';
 import SideDrawer from './SideDrawer/SideDrawer';
 import Backdrop from '../../UI/Backdrop/Backdrop';
+
 
 class Header extends Component {
     constructor(props) {
@@ -45,7 +47,7 @@ class Header extends Component {
 
         return (
             <div className={styles.Header}>
-                <div className={styles.Logo}>Tic-Tac-Toe</div>
+                <Logo />
                 {headerButtons}
             </div>
         )
