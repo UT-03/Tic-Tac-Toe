@@ -4,12 +4,17 @@
     top: 60px;
     width: 150px;
     height: 0px;
+    /* padding: 10px; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     transition: all 0.3s;
+    z-index: 999;
+}
+
+.SideDrawer button{
+    margin: 10px;
 }
 
 .Show{

@@ -1,0 +1,33 @@
+/* .Wrapper{
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+} */
+
+.HomeBox{
+    width: 95%;
+    height: 60%;
+    margin: 50px auto;
+    max-width: 300px;
+    height: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 275px;
+}
+
+@media (min-width:750px){
+    .HomeBox{
+        font-size: 30px;
+        max-width: 600px;
+        min-height: 400px;
+    }
+}
