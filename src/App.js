@@ -16,12 +16,21 @@ class App extends Component {
       gameState: 1
     }
   }
+
+  saveData = (data) => {
+    let playerDetails$ = [...this.state.playerDetails];
+    playerDetails$[0].name = data[0].name;
+    playerDetails$[1].name = data[1].name;
+
+    this.setState({ playerDetails: playerDetails$ })
+  }
+
   render() {
     return (
       <Aux>
         {/* <Header type={2}></Header> */}
         {/* <HomePage /> */}
-        <PlayerPreferencesPage />
+        <PlayerPreferencesPage saveData={this.saveData} />
       </Aux>
     )
   }

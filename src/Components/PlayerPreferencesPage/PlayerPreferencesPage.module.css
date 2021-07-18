@@ -1,0 +1,17 @@
+.Container {
+    max-width: 400px;
+    height: 250px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
