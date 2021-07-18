@@ -7,7 +7,7 @@ const controlButtons = (props) => {
 
     if (props.type === 1)
         but = <Aux>
-            <Button type={1}>New game</Button>
+            <Button clicked={props.startNewGame} type={1}>New game</Button>
             <Button type={4}>Load game</Button>
         </Aux>
 

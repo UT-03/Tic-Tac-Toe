@@ -9,6 +9,7 @@
 
 .Image{
     height: 100%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 .Text{
     display: none;
@@ -21,6 +22,7 @@
     .Text{
         display: block;
         font-size: 1.5rem;
+        color: white;
     }
 
 }

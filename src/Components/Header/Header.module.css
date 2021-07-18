@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
 }
 
 .Logo{
@@ -16,6 +18,26 @@
     display: none;
 }
 
+.Buttons2{
+    width: 40%;
+    max-width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Buttons2 div{
+    height: 100%;
+}
+.Image{
+    height: 100%;
+}
+.reload{
+    filter: invert(62%) sepia(99%) saturate(1406%) hue-rotate(143deg) brightness(98%) contrast(91%);
+}
+.exit{
+    filter: invert(33%) sepia(26%) saturate(3770%) hue-rotate(324deg) brightness(89%) contrast(107%);
+}
 @media (min-width:750px)
 {
     .Header{
@@ -27,5 +49,8 @@
         width: 40%;
         max-width: 275px;
         justify-content: space-between;
+    }
+    .Buttons2{
+        max-width: 100px;
     }
 }

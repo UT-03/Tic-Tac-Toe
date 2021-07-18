@@ -1,57 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Header.module.css';
-import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Logo from './Logo/Logo';
 import ControlButtons from '../ControlButtons/ControlButtons';
-import Burger from './Burger/Burger';
-import SideDrawer from './SideDrawer/SideDrawer';
-import Backdrop from '../../UI/Backdrop/Backdrop';
+import reloadImage from '../../Assets/reload.svg'
+import exitImage from '../../Assets/exit.svg'
 
+const header = (props) => {
+    // Header type:-
+    // 1-when gameState is 1
+    // 2-when gameState is 3
+    let headerButtons = null;
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showSideDrawer: false
-        }
-    }
+    if (props.type === 1)
+        headerButtons = <div className={styles.Buttons}>
+            <ControlButtons type={1} />
+        </div>
+    else if (props.type === 2)
+        headerButtons = <div className={styles.Buttons2}>
+            <div onClick={props.reloadGame}><img src={reloadImage} className={[styles.Image, styles.reload].join(' ')} alt="reload" /></div>
+            <div onClick={props.backToHome}><img src={exitImage} className={[styles.Image, styles.exit].join(' ')} alt="exit" /></div>
+        </div>
 
-    toggleSideDrawer = () => {
-        let prevState = this.state.showSideDrawer;
-        let newState = !prevState;
-
-        this.setState({ showSideDrawer: newState })
-
-    }
-    render() {
-        // Header type:-
-        // 1-when gameState is 1
-        // 2-when gameState is 3
-        let headerButtons = null;
-
-        if (this.props.type === 1)
-            headerButtons = <div className={styles.Buttons}>
-                <ControlButtons type={1} />
-            </div>
-        else if (this.props.type === 2)
-            headerButtons = <Aux>
-                <div className={styles.Buttons}>
-                    <ControlButtons type={2} />
-                </div>
-                <Burger clicked={this.toggleSideDrawer}
-                    toggle={this.state.showSideDrawer} />
-                <SideDrawer show={this.state.showSideDrawer} />
-                <Backdrop clicked={this.toggleSideDrawer}
-                show={this.state.showSideDrawer} />
-            </Aux>
-
-        return (
-            <div className={styles.Header}>
-                <Logo />
-                {headerButtons}
-            </div>
-        )
-    }
+    return (
+        <div className={styles.Header}>
+            <Logo />
+            {headerButtons}
+        </div>
+    )
 }
 
-export default Header;
+
+export default header;

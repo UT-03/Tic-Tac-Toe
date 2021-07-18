@@ -1,0 +1,16 @@
+.Grid {
+    width: 33.33333%;
+    height: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px double white;
+}
+
+.Image {
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    filter: invert(98%) sepia(43%) saturate(34%) hue-rotate(156deg) brightness(114%) contrast(92%);
+    border: none;
+}

@@ -1,0 +1,24 @@
+.GameGrids{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    border: none;
+    background-color: hsla(152, 69%, 31%, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+@media (min-width:750px)
+{
+    .GameGrids{
+        width: 600px;
+        height: 600px;
+    }
+}
+@media (min-width:1500px)
+{
+    .GameGrids{
+        width: 750px;
+        height: 750px;
+    }
+}
