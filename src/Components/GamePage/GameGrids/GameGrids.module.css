@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 300px;
     height: 300px;
+    margin-top: 50px;
     border: none;
     background-color: hsla(152, 69%, 31%, 0.6);
     backdrop-filter: blur(4px);

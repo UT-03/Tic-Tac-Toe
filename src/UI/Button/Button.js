@@ -20,7 +20,8 @@ const button = (props) => {
         buttonClasses.push(styles.Yellow)
 
     return (
-        <button className={buttonClasses.join(' ')}
+        <button style={props.style}
+            className={buttonClasses.join(' ')}
             onClick={props.clicked}>{props.children}</button>
     )
 }

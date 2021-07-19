@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 }
 
@@ -31,6 +31,7 @@
 }
 .Image{
     height: 100%;
+    cursor: pointer;
 }
 .reload{
     filter: invert(62%) sepia(99%) saturate(1406%) hue-rotate(143deg) brightness(98%) contrast(91%);

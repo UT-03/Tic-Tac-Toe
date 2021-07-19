@@ -14,11 +14,13 @@ const collectData = (event, index) => {
 
 const playerPreferencesPage = (props) => {
     return (
-        <div className={styles.Container}>
-            <Players changed={collectData} />
-            <div className={styles.buttons}>
-                <Button clicked={() => props.startNewGame(data)} type={1}>Start</Button>
-                <Button clicked={props.backToHome} type={2}>Cancel</Button>
+        <div className={styles.Wrapper}>
+            <div className={styles.Container}>
+                <Players changed={collectData} />
+                <div className={styles.buttons}>
+                    <Button clicked={() => props.startNewGame(data)} type={1}>Start</Button>
+                    <Button clicked={props.backToHome} type={2}>Cancel</Button>
+                </div>
             </div>
         </div>
     )

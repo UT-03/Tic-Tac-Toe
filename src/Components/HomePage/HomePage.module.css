@@ -10,8 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
     color: white;
 }
 
@@ -22,7 +20,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .buttons {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Aux from './hoc/Auxiliary/Auxiliary';
-// import Header from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';
 import PlayerPreferencesPage from './Components/PlayerPreferencesPage/PlayerPreferencesPage';
 import GamePage from './Components/GamePage/GamePage'
+import GameEndMessages from './Components/GameEndMessages/GameEndMessages'
 
 let TOTAL_TURNS = 0;
 
@@ -13,8 +13,8 @@ class App extends Component {
     super(props);
     this.state = {
       playerDetails: [
-        { name: 'Utkarsh', avatar: 'x' },
-        { name: 'Tiwari', avatar: 'o' }
+        { name: null, avatar: 'x' },
+        { name: null, avatar: 'o' }
       ],
       gameArray: [
         [0, 0, 0],
@@ -22,12 +22,12 @@ class App extends Component {
         [0, 0, 0]
       ],
       currentPlayer: 1,
-      winner: null,
+      winner: 1,
       gameState: 1
     }
   }
 
-  newGame = () => {
+  startGameClikHandler = () => {
     this.setState({ gameState: 2 })
   }
 
@@ -108,13 +108,13 @@ class App extends Component {
 
     if (won === true) {
       this.setState({
-        winner: this.state.currentPlayer,
-        gameState: 6
+        winner: this.state.playerDetails[this.state.currentPlayer - 1].name,
+        gameState: 4
       })
     }
     else if (TOTAL_TURNS === 9) {
       this.setState({
-        gameState: 7
+        gameState: 5
       })
     }
   }
@@ -131,6 +131,7 @@ class App extends Component {
   }
 
   reloadgame = () => {
+    TOTAL_TURNS = 0;
     this.setState({
       gameArray: [
         [0, 0, 0],
@@ -144,6 +145,7 @@ class App extends Component {
   }
 
   backToHome = () => {
+    TOTAL_TURNS = 0;
     this.setState({
       playerDetails: [
         { name: null, avatar: 'x' },
@@ -163,7 +165,7 @@ class App extends Component {
   render() {
     let layout = null;
     if (this.state.gameState === 1)
-      layout = <HomePage startNewGame={this.newGame} />
+      layout = <HomePage startNewGame={this.startGameClikHandler} />
 
     else if (this.state.gameState === 2)
       layout = <PlayerPreferencesPage backToHome={this.backToHome} startNewGame={this.startNewGame} />
@@ -176,6 +178,13 @@ class App extends Component {
         gameArray={this.state.gameArray}
         reloadGame={this.reloadgame}
         backToHome={this.backToHome} />
+
+    else if (this.state.gameState === 4 || this.state.gameState === 5)
+      layout = <GameEndMessages
+        type={this.state.gameState}
+        winner={this.state.winner}
+        playAgain={this.reloadgame}
+        exit={this.backToHome} />
 
     return (
       <Aux>
