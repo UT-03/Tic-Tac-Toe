@@ -6,7 +6,7 @@ const logo=()=>{
     return(
         <div className={styles.Logo}>
             <img src={image} alt="Logo" className={styles.Image} />
-            <div className={styles.Text}>Tic-Tac-Toe</div>
+            <div className={styles.Text}>Tic &diams; Tac &diams; Toe</div>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const gameEndMessages = (props) => {
     if (props.type === 4)
         message = <p>{props.winner} won</p>
     else if (props.type === 5)
-        message = <p>It's a tie!</p>
+        message = <p>Draw!</p>
     return (
         <div className={styles.Wrapper}>
             <div className={styles.Box}>
