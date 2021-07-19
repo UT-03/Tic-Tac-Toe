@@ -56,7 +56,6 @@ class App extends Component {
     let won = false;
     let flag = 1;
     let gameArray$ = [...this.state.gameArray];
-    console.log(gameArray$);
 
     for (let i = 0; i < 3; i++) {
       if (gameArray$[i][l] !== this.state.currentPlayer) {
@@ -121,7 +120,6 @@ class App extends Component {
 
   gridClicked = (i, j) => {
     TOTAL_TURNS++;
-    console.log(TOTAL_TURNS);
     let gameArray$ = [...this.state.gameArray]
     gameArray$[i][j] = this.state.currentPlayer;
 
