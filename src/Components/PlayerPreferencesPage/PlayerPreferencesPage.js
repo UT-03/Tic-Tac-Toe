@@ -19,7 +19,12 @@ const playerPreferencesPage = (props) => {
                 <Players changed={collectData} />
                 <div className={styles.buttons}>
                     <Button clicked={() => props.startNewGame(data)} type={1}>Start</Button>
-                    <Button clicked={props.backToHome} type={2}>Cancel</Button>
+                    <Button clicked={() => {
+                        props.backToHome();
+                        data[0].name = 'Player 1';
+                        data[1].name = 'Player 2';
+                    }}
+                        type={2}>Cancel</Button>
                 </div>
             </div>
         </div>
